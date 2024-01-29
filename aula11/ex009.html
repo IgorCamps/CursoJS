@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAÍS DE ORIGEM</title>
+
+    <style>
+        body {
+            background: #d4c9c9;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    Onde você mora? <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Enviar" onclick="calcular()">
+
+    <div id="res">
+        
+    </div>
+
+    <script>
+        function calcular() {
+        var txtpais = window.document.querySelector('input#txtpais')
+        var res = window.document.querySelector('div#res')
+        var mora = txtpais.value
+
+        res.innerHTML = `Você vive na(o) <strong>${mora}</strong>`
+
+        if (mora == 'Brasil') {
+            res.innerHTML += `<br>Você é brasileiro`
+        }
+    }
+    </script>
+</body>
+</html>
